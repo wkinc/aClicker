@@ -37,8 +37,8 @@ That's it. The script will check for Python, install all dependencies automatica
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/wkinc/aClicker.git
+   cd "WHERE YOU CLONE"
    ```
 
 2. **Install dependencies**
