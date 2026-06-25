@@ -12,7 +12,6 @@ A lightweight, high-performance auto clicker for Windows with a sleek dark UI, s
 - **Left / Right / Middle** mouse button support
 - **Customizable hotkey** to toggle clicking on/off without touching the window
 - **System tray** support — minimize to tray and restore anytime
-- **Borderless dark UI** that stays on top
 
 ---
 
