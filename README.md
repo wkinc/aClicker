@@ -89,7 +89,9 @@ This packages the app into a single `.exe` that runs without Python installed â€
 
    You can rename it and distribute it freely â€” no Python installation required on the target machine.
 
-> **Note:** Windows Defender or other antivirus software may flag PyInstaller-built executables as suspicious. This is a common false positive with packaged Python apps. If needed, add an exclusion for the `dist/` folder or submit the file to your antivirus vendor for whitelisting. This is also the bash line i used to create the exe file. If you are not confident in this bash/pwsh command, you can use your own or the other option.
+> **Note:** Windows Defender or other antivirus software may flag PyInstaller-built executables as suspicious. This is a common false positive with packaged Python apps. If needed, add an exclusion for the `dist/` folder or submit the file to your antivirus vendor for whitelisting. 
+>
+> This is also the bash line i used to create the exe file. If you are not confident in this bash/pwsh command, you can use your own or the other option.
 
 ---
 
