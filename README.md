@@ -53,6 +53,44 @@ That's it. The script will check for Python, install all dependencies automatica
    python main.py
    ```
 
+### Option 3 — Build a standalone executable with PyInstaller
+
+This packages the app into a single `.exe` that runs without Python installed — useful for sharing with others.
+
+1. **Install PyInstaller**
+
+   ```bash
+   pip install pyinstaller
+   ```
+
+2. **Build the executable**
+
+   ```bash
+   pyinstaller --onefile --noconsole --hidden-import=keyboard --hidden-import=pynput --hidden-import=pystray --hidden-import=pystray._win32 --hidden-import=PIL main.py
+   ```
+
+   | Flag | Purpose |
+   |------|---------|
+   | `--onefile` | Bundles everything into a single `.exe` |
+   | `--noconsole` | Hides the console window when running |
+   | `--hidden-import=keyboard` | Ensures the `keyboard` module is included |
+   | `--hidden-import=pynput` | Ensures the `pynput` module is included |
+   | `--hidden-import=pystray` | Ensures the `pystray` module is included |
+   | `--hidden-import=pystray._win32` | Includes the Windows-specific pystray backend |
+   | `--hidden-import=PIL` | Ensures Pillow is included for the tray icon |
+
+3. **Find and run the output**
+
+   The compiled executable will be at:
+
+   ```
+   dist/main.exe
+   ```
+
+   You can rename it and distribute it freely — no Python installation required on the target machine.
+
+> **Note:** Windows Defender or other antivirus software may flag PyInstaller-built executables as suspicious. This is a common false positive with packaged Python apps. If needed, add an exclusion for the `dist/` folder or submit the file to your antivirus vendor for whitelisting. This is also the bash line i used to create the exe file. If you are not confident in this bash/pwsh command, you can use your own or the other option.
+
 ---
 
 ## Dependencies
